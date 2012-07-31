@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3E0014BA-5CAE-4962-A8E4-6BCA453CF618}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>showcase</RootNamespace>
+    <AssemblyName>showcase</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>true</MtouchProfiling>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>true</MtouchProfiling>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="OpenTK" />
+    <Reference Include="showcase-core">
+      <HintPath>showcase-core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core">
+      <HintPath>..\..\..\..\projects\ikvm-monotouch\bin\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Sqlite" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\peas\images\bg.png">
+      <Link>peas\images\bg.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\peas\images\Block-Gel.png">
+      <Link>peas\images\Block-Gel.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\peas\images\Block-LeftRamp.png">
+      <Link>peas\images\Block-LeftRamp.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\peas\images\Block-Normal.png">
+      <Link>peas\images\Block-Normal.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\peas\images\Block-RightRamp.png">
+      <Link>peas\images\Block-RightRamp.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\peas\images\Block-Spring.png">
+      <Link>peas\images\Block-Spring.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\peas\images\chrome.png">
+      <Link>peas\images\chrome.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\peas\images\Cloud1.png">
+      <Link>peas\images\Cloud1.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\peas\images\Cloud3.png">
+      <Link>peas\images\Cloud3.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\peas\images\pea.png">
+      <Link>peas\images\pea.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\peas\images\peaglow.png">
+      <Link>peas\images\peaglow.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\peas\images\teleport.png">
+      <Link>peas\images\teleport.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\peas\levels\level1.json">
+      <Link>peas\levels\level1.json</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\sprites\bg.png">
+      <Link>sprites\bg.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\sprites\pea.png">
+      <Link>sprites\pea.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\sprites\peasprite.json">
+      <Link>sprites\peasprite.json</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\sprites\peasprite2.json">
+      <Link>sprites\peasprite2.json</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\sprites\peasprites.png">
+      <Link>sprites\peasprites.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\sprites\peasprites2.png">
+      <Link>sprites\peasprites2.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\sprites\peasprites3.png">
+      <Link>sprites\peasprites3.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\swirl\background.png">
+      <Link>swirl\background.png</Link>
+    </Content>
+    <Content Include="..\core\src\main\java\playn\showcase\resources\swirl\girlcat.png">
+      <Link>swirl\girlcat.png</Link>
+    </Content>
+  </ItemGroup>
+</Project>
